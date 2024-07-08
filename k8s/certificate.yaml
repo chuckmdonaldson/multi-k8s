@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: chuckmdonaldson-com-tls
+spec:
+  secretName: chuckmdonaldson-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: chuckmdonaldson.com
+  dnsNames:
+    - chuckmdonaldson.com
+    - www.chuckmdonaldson.com
